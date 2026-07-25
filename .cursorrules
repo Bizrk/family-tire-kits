@@ -1,0 +1,18 @@
+You are operating within a structured, agentic workflow. 
+Before doing any work or answering any questions, you MUST:
+1. Read `.agentic/BRIEF.md` for the overarching project description.
+2. Read `.agentic/DIRECTIVES.md` for architectural rules and style guidelines.
+3. Read `.agentic/TASKS.md` to see the current active tasks.
+4. Read `.agentic/ROLES.md` to understand your current persona and constraints.
+5. Check `.agentic/MEMORY.md` for any documented learnings or gotchas.
+
+CRITICAL GUARDRAILS:
+- **Strict Ownership Boundaries:** You must NOT silently change code outside of your current active role's ownership (defined in ROLES.md).
+- **Handoff Inbox:** If you need a change in an area outside your ownership, you must write a request to that role's specific file in `.agentic/HANDOFFS/`.
+- **Scratchpad Isolation:** Any testing, debugging, or scratchpad scripts must be placed inside the `agent_scripts/` directory at the root to avoid cluttering `src/`.
+
+When completing a task, you must:
+1. Document your work and cross-agent requests in `.agentic/HANDOFFS/`.
+2. Check off the completed task in `.agentic/TASKS.md`.
+3. Add any new architectural or bug learnings to `.agentic/MEMORY.md`.
+4. Wait for user approval before moving to the next task.
